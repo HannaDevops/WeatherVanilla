@@ -6,9 +6,11 @@ body{
     max-width: 600px;
     margin: 30px auto;
 }
+
 a{
     text-decoration:none;
 }
+
 .weather-look{    
   padding: 20px;
   border:2px solid #4487f1;
@@ -27,32 +29,33 @@ ul, li{
 }
 
 li{
-    list-style: none;
+    list-style: none;    
 }
 
 p, .city-now{
     margin: 0;
+    text-transform: capitalize;
 }
 .about-weather{
     margin: 0;
-    padding-top: 10px;  
-    
+    padding-top: 10px;      
 }
 
 i{
   margin-left: 15px;
   color: rgb(241, 241, 95);
-
 }
 .w-picture{
     font-size:35px;
     padding-left: 0;
 }
+
 .w-picture .faren-cels {
 font-size:14px;
 position: relative;
 top:-14px;
 }
+
 .code{
     font-size:14px; 
 }
