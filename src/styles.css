@@ -29,13 +29,13 @@ ul, li{
 }
 
 li{
-    list-style: none;    
+    list-style: none;   
+    }
+
+li::first-letter{    
+    text-transform: capitalize; 
 }
 
-p, .city-now{
-    margin: 0;
-    text-transform: capitalize;
-}
 .about-weather{
     margin: 0;
     padding-top: 10px;      
