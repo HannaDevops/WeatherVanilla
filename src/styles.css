@@ -1,1 +1,58 @@
-h1 {color: blue;}
+body{
+    font-family: 'YS Text',Helvetica Neue,Arial;
+    color: rgb(115,115,115);
+    font-size: 18px;
+    font-weight: 400;
+    max-width: 600px;
+    margin: 30px auto;
+}
+a{
+    text-decoration:none;
+}
+.weather-look{    
+  padding: 20px;
+  border:2px solid #4487f1;
+  border-radius: 15px;
+}
+
+h1 {    
+    display: block;
+    font-size: 32px;
+    margin:0;
+}
+
+ul, li{
+    margin:0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+p, .city-now{
+    margin: 0;
+}
+.about-weather{
+    margin: 0;
+    padding-top: 10px;  
+    
+}
+
+i{
+  margin-left: 15px;
+  color: rgb(241, 241, 95);
+
+}
+.w-picture{
+    font-size:35px;
+    padding-left: 0;
+}
+.w-picture .faren-cels {
+font-size:14px;
+position: relative;
+top:-14px;
+}
+.code{
+    font-size:14px; 
+}
