@@ -41,10 +41,7 @@ li::first-letter{
     padding-top: 10px;      
 }
 
-i{
-  margin-left: 15px;
-  color: rgb(241, 241, 95);
-}
+
 .w-picture{
     font-size:40px;
     padding-left: 0;
