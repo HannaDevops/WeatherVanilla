@@ -23,7 +23,7 @@ function formatDate(timestamp){
 
 
 function displayTemper(response){
-    console.log(response.data);
+    //console.log(response.data);
     let cityElem = document.querySelector("#city");
     let temperElem = document.querySelector("#temper");
     let descriptionElem =document.querySelector("#description");
