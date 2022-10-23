@@ -56,3 +56,12 @@ top:-14px;
 .code{
     font-size:14px; 
 }
+
+.faren-cels .active{
+    color: rgb(115,115,115);
+    cursor: default;
+}
+
+.faren-cels .active:hover{
+    text-decoration: none;
+}

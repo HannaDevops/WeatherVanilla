@@ -31,7 +31,8 @@ function displayTemper(response){
     let windElem =document.querySelector("#wind");
     let nowtimeElem = document.querySelector("#nowtime");
     let iconElem = document.querySelector("#w-icon");
-    temperElem.innerHTML =Math.round(response.data.main.temp);
+    celsTemp = response.data.main.temp;
+    temperElem.innerHTML =Math.round(celsTemp);
     cityElem.innerHTML =response.data.name;
     descriptionElem.innerHTML =response.data.weather[0].description;
     humidElem.innerHTML =response.data.main.humidity;
@@ -52,7 +53,31 @@ function searchCity(event){
   showWeather(cityInsert.value.trim());
 }
 
+function showFarenheit(event){
+  event.preventDefault();
+  let farenElem = document.querySelector("#temper");
+  celsijTemp.classList.remove("active");
+  farenTemp.classList.add("active");
+  let farenheiTemp = celsTemp *9/5 + 32;
+  farenElem.innerHTML =  Math.round(farenheiTemp);
+}
+function  showCelsij(event){
+  event.preventDefault();
+  let celsijElem = document.querySelector("#temper");
+  farenTemp.classList.remove("active");
+  celsijTemp.classList.add("active");
+  celsijElem.innerHTML =  Math.round(celsTemp);
+}
 
+showWeather("Tokyo");
+
+let celsTemp = null;
 
 let formCity = document.querySelector("#search-city");
 formCity.addEventListener("submit", searchCity);
+
+let farenTemp = document.querySelector("#farengeit-temp");
+farenTemp.addEventListener("click", showFarenheit);
+
+let celsijTemp = document.querySelector("#celsiy-temp");
+celsijTemp.addEventListener("click", showCelsij);
