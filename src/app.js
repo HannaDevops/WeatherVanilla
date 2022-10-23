@@ -50,6 +50,8 @@ function showWeather(cityName){
 function searchCity(event){
   event.preventDefault();
   let cityInsert = document.querySelector("#city-insert");
+  farenTemp.classList.remove("active");
+  celsijTemp.classList.add("active");
   showWeather(cityInsert.value.trim());
 }
 
