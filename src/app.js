@@ -39,9 +39,20 @@ function displayTemper(response){
     nowtimeElem.innerHTML = formatDate(response.data.dt * 1000);
     iconElem.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
+function showWeather(cityName){
+  let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemper);
+}
 
-let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
-let cityName ="Odessa";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
 
-axios.get(apiUrl).then(displayTemper);
+function searchCity(event){
+  event.preventDefault();
+  let cityInsert = document.querySelector("#city-insert");
+  showWeather(cityInsert.value.trim());
+}
+
+
+
+let formCity = document.querySelector("#search-city");
+formCity.addEventListener("submit", searchCity);

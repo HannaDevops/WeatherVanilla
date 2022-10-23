@@ -19,7 +19,17 @@ crossorigin="anonymous"
     <div class="container">
         <div class="weather-look">
             <div class="city_now">
-                <h1 id="city">Tokio</h1>
+                <form class ="mb-3" id="search-city">
+                    <div class="row">
+                        <div class="col-9">
+                            <input type="search" class="form-control" placeholder="Enter a city..." id="city-insert">
+                        </div>
+                        <div class="col-3">
+                            <input type="submit" value="Search" class="btn btn-primary">
+                        </div>
+                    </div>
+                </form>
+                <h1 id="city"></h1>
                 <ul>
                   <li id="description"></li>
                   <li id="nowtime"></li>
@@ -27,7 +37,7 @@ crossorigin="anonymous"
             </div>
             <div class="row about-weather">
                 <div class="col-6 w-picture">
-                    <strong id="temper">13</strong>
+                    <strong id="temper"></strong>
                     <span class="faren-cels">°C | 
                         <a href="#">°F</a></span>
                     <img src="" id="w-icon"></img>
